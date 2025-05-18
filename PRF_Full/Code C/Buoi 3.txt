@@ -1,0 +1,306 @@
+1.//Tinh tong 1+1/1+1/2+...+1/n
+#include<stdio.h>
+int main(){
+	int i,n;
+	float sum=0;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		sum=sum+1.0/i;
+	}
+	printf("%f",sum);
+	return 0;
+}
+
+
+
+2.//Tinh tong binh phuong cac so le tu 1 den n
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,n;
+  int sum=0;
+  scanf("%d",&n);
+  for(i=1;i<=n;i+=2){
+  	if(i%2!=0){
+  		sum+=i*i;
+}
+  }
+    
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+  printf("%d",sum);
+  
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+
+3.//Tinh n!
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,n;
+  int giaithua=1;
+  scanf("%d",&n);
+  for(i=1;i<=n;i++){
+  	giaithua*=i;
+  	
+}
+   
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+  printf("%d",giaithua);
+
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+
+4.//Tinh tich cac so a den b
+
+#include <math.h>
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,a,b;
+  int tich=1;
+  scanf("%d %d",&a,&b);
+  for(i=a;i<=b;i++){
+  	tich*=i;
+  } 
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+  
+   	printf("%d ",tich);
+   
+
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+5.// nhap n tim divisor (ước)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,n;
+  scanf("%d",&n);
+  
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+  for(i=1;i<=n;i++){
+  	if(n%i==0){
+  		printf("%d ",i);
+	  }
+  }
+   	  
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+
+6.//in ra cac so ngto tu 1 den n
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+int isPrime(int num) {
+    if (num <= 1) {
+        return 0; // Không ph?i s? nguyên t?
+    }
+    int i;
+    for ( i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            return 0; // Không ph?i s? nguyên t?
+        }
+    }
+    return 1; // Là s? nguyên t?
+    
+}
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,n;
+  scanf("%d",&n);
+  
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+for(i=2;i<=n;i++){
+  	if(isPrime(i)==1){
+  		printf("%d ",i);
+	  }
+}
+
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+
+7.//nhap tu 1 den n in ra cac so hh
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+int hamktrasohh(int n){
+	int i,sum=0;
+for(i=1;i<n;i++){
+  	if(n%i==0){
+  		sum+=i;
+	  }
+  } 
+  if(sum==n){
+  	return 1;
+  }else{
+  	return 0;
+  }
+}
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,n,c=0;
+  scanf("%d",&n);
+  
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+
+for(i=1;i<=n;i++){
+	if(hamktrasohh(i)==1){
+                c++;
+		printf("%d ",i);
+	}
+	
+ }
+ printf("tong so hh la %d",c);
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+
+8.//In ra tong cac so la so nguyen to tu 1 den n
+#include<stdio.h>
+#include <math.h>
+int isPrime(int num) {
+    if (num <= 1) {
+        return 0; // Không ph?i s? nguyên t?
+    }
+    int i;
+    for ( i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            return 0; // Không ph?i s? nguyên t?
+        }
+    }
+    return num; // Là s? nguyên t?
+}
+int tongchuso(int num){
+	int sum=0;
+    while(num>0){
+  	sum+=num%10;
+  	num/=10;
+}
+return sum;
+}
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i,n;
+  scanf("%d",&n);  
+  
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+for(i=2;i<=n;i++){
+   	if(isPrime(tongchuso(i))){
+   		printf("%d ",i);
+	   }
+  }
+  
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+
+
+9.//In ra tam giac nguyen to
+#include<stdio.h>
+#include<math.h>
+int isPrime(int num) {
+    if (num <= 1) {
+        return 0; // Không ph?i s? nguyên t?
+    }
+    int i;
+    for ( i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            return 0; // Không ph?i s? nguyên t?
+        }
+    }
+    return 1; // Là s? nguyên t?
+}
+void generate_triangle(int n) {
+    int i,current_num = 2;
+    for ( i = 0; i < n; i++) {
+        int num_to_print = current_num;
+        int count = 0; // Ð?m s? lu?ng s? nguyên t? du?c in ra trong hàng th? i
+        while (count <= i) {
+            if (isPrime(num_to_print)) {
+                printf("%d ", num_to_print);
+                count++;
+            }
+            num_to_print++;
+        }
+        printf("\n");
+        current_num = num_to_print;
+    }
+}
+
+int main(){
+	int n;
+	scanf("%d",&n);
+//	for(i=1;i<=n;i++){
+//		printf("%d",i);
+//	}
+    generate_triangle(n);	
+	return 0;
+}

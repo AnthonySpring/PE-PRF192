@@ -1,0 +1,156 @@
+1.//tao hcn day du
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int n;
+  int i,j;
+  scanf("%d",&n);
+  
+  
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+ for(i=1;i<n;i++){
+  	for(j=1;j<n;j++){
+  	   printf("*");	
+	  }
+	  printf("\n");
+  }
+
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+2.//tao tam giac
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int n;
+  int i,j;
+  scanf("%d",&n);
+  
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+ for(i=1;i<=n;i++){
+  	for(j=1;j<=i;j++){
+  	   printf("*");	
+	  }
+	  printf("\n");
+  }
+  
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}
+
+
+3.//Tao hinh tong hop
+/vẽ hình vuông
+int main(){
+	int i,j,n;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		for(j=1;j<=n;j++){
+			printf("* ");
+		}
+		printf("\n");
+	}
+}
+
+//vẽ tam giác vuông hướng phải
+int main(){
+	int i,j,n;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		for(j=1;j<=i;j++){
+			printf("* ");
+		}
+		printf("\n");
+	}
+}
+
+//vẽ tam giác vuông in số lần lượt
+int main(){
+	int i,j,n;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		for(j=1;j<=i;j++){
+			printf("* ");
+		}
+		printf("\n");
+	}
+}
+
+//vẽ tam giác vuông xen kẽ 1,0 giữa các dòng
+int main(){
+	int i,j,n;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		for(j=1;j<=i;j++){
+		if(i%2 !=0){
+			printf("1 ");
+		}else{
+			printf("0 ");
+		}
+			
+		}
+		printf("\n");
+	}
+}
+
+//vẽ tam giác vuông xen kẽ 1,0 giữa số
+int main(){
+	int i,j,n;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		for(j=1;j<=i;j++){
+		if(j%2 !=0){
+			printf("1 ");
+		}else{
+			printf("0 ");
+		}
+			
+		}
+		printf("\n");
+	}
+
+
+4.//Nhap chieu dai va rong hcn in ra hcn doc
+
+#include <stdio.h>
+int main() {
+    int n, m,i,j;
+    printf("Nhap vao chieu dai n va chieu rong m: ");
+    scanf("%d %d", &n, &m); // n là chi?u dài và m là chi?u r?ng c?a hình ch? nh?t
+
+    for ( i = 1; i <= n; i++) {
+        for ( j = 1; j <= m; j++) {
+            // In ra '*' n?u là c?nh trên, c?nh du?i, c?t d?u tiên ho?c c?t cu?i cùng
+            if (i == 1 || i == n || j == 1 || j == m) {
+                printf("* ");
+            } else {
+                printf("  "); // In ra kho?ng tr?ng cho ph?n bên trong c?a hình ch? nh?t
+            }
+        }
+        printf("\n"); // Xu?ng dòng sau m?i hàng
+    }
+
+    return 0;
+}
